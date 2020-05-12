@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiju.dao.IUserInforDao" >
+
+    <!-- 根据手机号查询===登录 -->
+    <select id="findUserByPhone" resultType="com.yiju.bean.UserInfor" parameterType="String">
+        select * from tb_user where phone = #{phone}
+    </select>
+
+    <!--添加用户-->
+    <insert id="addUserInfor" parameterType="String">
+        insert into tb_user(phone,password)values (#{phone},#{password})
+    </insert>
+
+    <!--保存信息修改-->
+    <update id="saveEdit" parameterType="com.yiju.bean.UserInfor">
+        update tb_user set phone =#{phone}, truename =#{truename},
+         nickname = #{nickname}, gender =#{gender}, city =#{city}
+         where phone = #{phone}
+    </update>
+
+    <!--根据id查询UserAuth-->
+    <select id="findUserAuthById" parameterType="java.lang.Integer" resultType="com.yiju.bean.UserAuth">
+        select * from tb_user_auth where user_id = #{userId}
+    </select>
+
+    <!--根据id修改UserInfor-->
+    <update id="updUserById" parameterType="com.yiju.bean.UserInfor">
+        update tb_user set password = #{password} where user_id = #{userId}
+    </update>
+
+    <!--查询收藏房源-->
+    <select id="getCollectViewById" parameterType="Integer" resultType="com.yiju.pojo.CollectView">
+        SELECT * FROM tb_collect a, tb_house b WHERE a.`house_id` = b.`house_id` AND a.`user_id` =#{userId}
+    </select>
+
+    <!--查询是否收藏房源-->
+    <select id="findCollectById" parameterType="Integer" resultType="com.yiju.bean.Collect">
+        select * from tb_collect where user_id=#{userId} and house_id = #{houseId}
+    </select>
+
+    <!--添加收藏-->
+    <insert id="addCollect" parameterType="com.yiju.bean.Collect">
+        insert into tb_collect(user_id,house_id,create_time,update_time)
+        values (#{userId},#{houseId},#{createTime},#{updateTime})
+    </insert>
+
+    <!--删除收藏-->
+    <delete id="delCollect" parameterType="Integer">
+        delete from tb_collect where coll_id =#{collId}
+    </delete>
+</mapper>

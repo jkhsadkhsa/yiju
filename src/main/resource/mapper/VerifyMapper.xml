@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiju.dao.IVerifyDao" >
+
+    <!--添加实名认证-->
+    <insert id="addVerifyInfor" parameterType="com.yiju.bean.UserAuth">
+        insert into tb_user_auth (user_card,user_card_address,user_live_address,user_Id,user_name,user_gender,create_time,update_time)
+         values (#{userCard},#{userCardAddress},#{userLiveAddress},#{userId},#{userName},#{userGender},#{createTime},#{updateTime})
+    </insert>
+
+    <!--删除实名认证-->
+    <delete id="delUserAuthByUserId" parameterType="java.lang.Integer">
+        delete from tb_user_auth where user_id =#{userId}
+    </delete>
+</mapper>
