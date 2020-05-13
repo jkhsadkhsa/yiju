@@ -1,7 +1,9 @@
 package com.yiju.service.Impl;
 
 import com.github.pagehelper.PageHelper;
+import com.yiju.bean.House;
 import com.yiju.dao.IHouseDao;
+import com.yiju.pojo.HouseInfo;
 import com.yiju.pojo.HouseView;
 import com.yiju.service.IHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +41,15 @@ public class HouseServiceImpl implements IHouseService {
     public List<HouseView> searchByHouseTitle(Integer page,String houseTitle) {
         PageHelper.startPage(page,5);
         return houseDao.searchByHouseTitle(houseTitle);
+    }
+
+    @Override
+    public int toHousePost(House house) {
+        return houseDao.toPostHouse(house);
+    }
+
+    @Override
+    public int saveHousePost2(HouseInfo houseInfo) {
+        return houseDao.saveHousePost2(houseInfo);
     }
 }

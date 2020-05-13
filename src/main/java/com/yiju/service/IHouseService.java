@@ -1,5 +1,7 @@
 package com.yiju.service;
 
+import com.yiju.bean.House;
+import com.yiju.pojo.HouseInfo;
 import com.yiju.pojo.HouseView;
 
 import java.util.List;
@@ -14,4 +16,8 @@ public interface IHouseService {
     HouseView findHouseById(Integer houseId);
     /*查询房屋ByHouseTitle*/
     List<HouseView> searchByHouseTitle(Integer page,String houseTitle);
+
+    int toHousePost(House house);
+
+    int saveHousePost2(HouseInfo houseInfo);
 }

@@ -1,5 +1,7 @@
 package com.yiju.dao;
 
+import com.yiju.bean.House;
+import com.yiju.pojo.HouseInfo;
 import com.yiju.pojo.HouseView;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,4 +20,8 @@ public interface IHouseDao {
     HouseView findHouseById(@Param(value = "houseId") Integer houseId);
     /*查询房屋ByHouseTitle*/
     List<HouseView> searchByHouseTitle(String houseTitle);
+
+    int toPostHouse(House house);
+
+    int saveHousePost2(HouseInfo houseInfo);
 }

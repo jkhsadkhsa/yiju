@@ -31,4 +31,15 @@
     <select id="searchByHouseTitle" resultType="com.yiju.pojo.HouseView" parameterType="String">
         select * from tb_house where house_title like CONCAT('%',#{houseTitle},'%')
     </select>
+
+    <!--添加房源-->
+    <insert id="toPostHouse" parameterType="com.yiju.bean.House">
+        insert into tb_house (user_id,house_type,house_title,house_headimg,house_planimg1,house_planimg2,house_img1,house_img2,house_img3,house_img4,house_img5,house_img6,house_price,price_unit,house_address,is_delete,create_time,update_time)
+        values (#{userId},#{houseType},#{houseTitle},#{houseHeadimg},#{housePlanimg1},#{housePlanimg2},#{houseImg1},#{houseImg2},#{houseImg3},#{houseImg4},#{houseImg5},#{houseImg6},#{housePrice},#{priceUnit},#{houseAddress},#{isDelete},#{createTime},#{updateTime});
+    </insert>
+    <!--添加房源2-->
+    <insert id="saveHousePost2" parameterType="com.yiju.pojo.HouseInfo">
+     insert into tb_house_info(house_id, house_nature, house_model, house_year, house_valid, house_layout, house_area, house_turn, house_floor, floor_all, house_decorate, house_lift, create_time, update_time)
+        values (#{houseId}, #{houseNature}, #{houseModel}, #{houseYear}, #{houseValid}, #{houseLayout}, #{houseArea}, #{houseTurn}, #{houseFloor}, #{floorAll}, #{houseDecorate}, #{houseLift}, #{createTime}, #{updateTime})
+    </insert>
 </mapper>

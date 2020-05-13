@@ -6,7 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ad15177-5a78-4cbb-a1a1-e5195bc5a5fb" name="Default Changelist" comment="" />
+    <list default="true" id="1ad15177-5a78-4cbb-a1a1-e5195bc5a5fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yiju/pojo/HouseInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yiju/pojo/HouseInter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sql/db_yiju.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yiju/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yiju/controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yiju/dao/IHouseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yiju/dao/IHouseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yiju/service/IHouseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yiju/service/IHouseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yiju/service/Impl/HouseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yiju/service/Impl/HouseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yiju/util/YIJuUntil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yiju/util/YIJuUntil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/mapper/HouseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mapper/HouseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +33,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -56,24 +73,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/yiju/bean" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\yiju\src\main\java\com\yiju\bean" />
       <recent name="D:\yiju\src\main\java\com\yiju\pojo" />
       <recent name="D:\yiju\src\main\webapp\pages" />
+      <recent name="D:\yiju\src\sql" />
       <recent name="D:\A代码\yiju\src\main\webapp\pages" />
-      <recent name="D:\A代码\yiju\src\main\java\com\yiju\bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.YIJuUntil">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.38">
     <configuration name="YIJuUntil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yiju.util.YIJuUntil" />
       <module name="yiju" />
@@ -87,14 +117,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.38" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 8.5.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.31" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="yiju:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/yiju" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -161,6 +192,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.YIJuUntil" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.38" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.YIJuUntil" />
@@ -218,11 +253,23 @@
       <workItem from="1589243079362" duration="4335000" />
       <workItem from="1589247568068" duration="4346000" />
       <workItem from="1589251944761" duration="2122000" />
+      <workItem from="1589347357882" duration="11648000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="179" y="0" key="#Project_Structure" timestamp="1587255964684">
